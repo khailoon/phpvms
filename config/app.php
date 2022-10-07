@@ -27,7 +27,7 @@ return [
 
     // Is the default key cipher. Needs to be changed, otherwise phpVMS will think
     // that it isn't installed. Doubles as a security feature, so keys are scrambled
-    'key'    => env('APP_KEY', 'base64:'.base64_encode(\Illuminate\Support\Str:random(32))),
+    'key'    => env('APP_KEY', 'base64:'.base64_encode(str_random(32))),
     'cipher' => 'AES-256-CBC',
 
     'providers' => [
